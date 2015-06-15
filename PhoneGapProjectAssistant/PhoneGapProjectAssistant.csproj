@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F530884C-14CF-4B70-923E-DA2157E4EDD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PhoneGapProjectAssistant</RootNamespace>
+    <AssemblyName>PhoneGapProjectAssistant</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.MainWindow.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.AndroidWidget.cs" />
+    <Compile Include="Widgets\AndroidWidget.cs" />
+    <Compile Include="Widgets\IOSWidget.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.IOSWidget.cs" />
+    <Compile Include="Widgets\WP8Widget.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.WP8Widget.cs" />
+    <Compile Include="PhoneGapProjectManagerWindow.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.PhoneGapProjectManagerWindow.cs" />
+    <Compile Include="DataStructures\PhoneGapProject.cs" />
+    <Compile Include="NewProjectWindow.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.NewProjectWindow.cs" />
+    <Compile Include="Widgets\PlatformWidget.cs" />
+    <Compile Include="CommandLineJobRunnerDialog.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.CommandLineJobRunnerDialog.cs" />
+    <Compile Include="DataStructures\CommandLineJob.cs" />
+    <Compile Include="ShellHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Widgets\" />
+    <Folder Include="DataStructures\" />
+  </ItemGroup>
+</Project>
