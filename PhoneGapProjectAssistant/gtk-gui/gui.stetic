@@ -899,26 +899,12 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="PhoneGapProjectAssistant.ProjectAssistantWindow" design-size="831 451">
+  <widget class="Gtk.Window" id="PhoneGapProjectAssistant.ProjectAssistantWindow" design-size="400 300">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">OpenNewWindow</property>
+    <property name="Title" translatable="yes">ProjectAssistantWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
-    <property name="BorderWidth">3</property>
     <child>
-      <widget class="Gtk.Fixed" id="fixed1">
-        <property name="MemberName" />
-        <property name="HasWindow">False</property>
-        <child>
-          <widget class="Gtk.ColorSelection" id="colorselection1">
-            <property name="MemberName" />
-            <property name="HasOpacityControl">True</property>
-          </widget>
-          <packing>
-            <property name="X">276</property>
-            <property name="Y">137</property>
-          </packing>
-        </child>
-      </widget>
+      <placeholder />
     </child>
   </widget>
 </stetic-interface>
