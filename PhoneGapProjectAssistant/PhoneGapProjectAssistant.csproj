@@ -75,9 +75,6 @@
     <Compile Include="NewProjectWindow.cs" />
     <Compile Include="gtk-gui\PhoneGapProjectAssistant.NewProjectWindow.cs" />
     <Compile Include="Widgets\PlatformWidget.cs" />
-    <Compile Include="CommandLineJobRunnerDialog.cs" />
-    <Compile Include="gtk-gui\PhoneGapProjectAssistant.CommandLineJobRunnerDialog.cs" />
-    <Compile Include="DataStructures\CommandLineJob.cs" />
     <Compile Include="ShellHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

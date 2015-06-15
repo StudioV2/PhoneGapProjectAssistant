@@ -46,7 +46,7 @@ namespace PhoneGapProjectAssistant
 				Version = widget.Attributes["version"].Value;
 
 				Name = widget["name"].InnerText;
-				Description = widget["description"].InnerText;²&&
+				Description = widget["description"].InnerText;
 
 				Author = widget["author"].InnerText;
 				Email = widget["author"].Attributes["email"].Value;

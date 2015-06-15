@@ -106,26 +106,16 @@ namespace PhoneGapProjectAssistant
 		protected void BuildClicked (object sender, EventArgs e)
 		{
 			UpdateProject ();
-			var cljrd = new CommandLineJobRunnerDialog ();
-			cljrd.SetCommandLineJob (new CommandLineJob ("/usr/local/bin/phonegap", "build"));
-			cljrd.Show ();
-			//cljrd.Start ();
 		}
 
 		protected void EmulateClicked (object sender, EventArgs e)
 		{
 			UpdateProject ();
-			var cljrd = new CommandLineJobRunnerDialog ();
-			cljrd.SetCommandLineJob (new CommandLineJob ("/usr/local/bin/phonegap", "emulate"));
-			cljrd.Show ();
 		}
 
 		protected void RunClicked (object sender, EventArgs e)
 		{
 			UpdateProject ();
-			var cljrd = new CommandLineJobRunnerDialog ();
-			cljrd.SetCommandLineJob (new CommandLineJob ("/usr/local/bin/phonegap", "run"));
-			cljrd.Show ();
 		}
 
 		protected void RebuildPlatformClicked (object sender, EventArgs e)
