@@ -45,6 +45,20 @@ namespace PhoneGapProjectAssistant
 				hbox.Homogeneous = true;
 				preferenceContentVbox.Add (hbox);
 			}
+
+			foreach (var kvp in PlatformIcons) {
+				var label = new Label ();
+				label.Text = kvp.Value;
+
+				iconsVbox.Add (label);
+			}
+
+			foreach (var kvp in PlatformSplashs) {
+				var label = new Label ();
+				label.Text = kvp.Value;
+
+				splashesVbox.Add (label);
+			}
 		}
 	}
 }

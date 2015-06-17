@@ -22,5 +22,9 @@ namespace PhoneGapProjectAssistant
 		public override string GetPlatformName() {
 			return "*";
 		}
+
+		public override void RebuildContent() {
+			base.RebuildContent ();
+		}
 	}
 }

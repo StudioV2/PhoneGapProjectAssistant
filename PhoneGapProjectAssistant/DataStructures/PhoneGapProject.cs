@@ -67,7 +67,21 @@ namespace PhoneGapProjectAssistant
 					case "platform":
 						foreach(PlatformWidget p in Platforms) {
 							if (subnode.Attributes["name"].Value == p.GetPlatformConfigName()) {
-								Console.WriteLine("Found " + p.GetPlatformRealName() + " platform node"); 
+								Console.WriteLine("Found " + p.GetPlatformRealName() + " platform node");	
+								int i = 0;
+								foreach(XmlNode resnode in subnode.ChildNodes) {
+									switch (resnode.Name) {
+									case "icon":
+										Console.WriteLine("  Found icon definition");
+										p.PlatformIcons.Add(i.ToString(), resnode.Attributes["src"].Value);
+										break;
+									case "splash":
+										Console.WriteLine("  Found splash definition");
+										p.PlatformSplashs.Add(i.ToString(),resnode.Attributes["src"].Value);
+										break;
+									}
+									i++;
+								}
 							}
 						}
 						break;

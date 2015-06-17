@@ -600,7 +600,7 @@ namespace PhoneGapProjectAssistant
 				this.Child.ShowAll ();
 			}
 			this.DefaultWidth = 830;
-			this.DefaultHeight = 664;
+			this.DefaultHeight = 713;
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 			this.button157.Clicked += new global::System.EventHandler (this.RebuildPlatformClicked);
