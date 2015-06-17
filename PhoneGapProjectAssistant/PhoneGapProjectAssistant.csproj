@@ -74,8 +74,11 @@
     <Compile Include="DataStructures\PhoneGapProject.cs" />
     <Compile Include="NewProjectWindow.cs" />
     <Compile Include="gtk-gui\PhoneGapProjectAssistant.NewProjectWindow.cs" />
-    <Compile Include="Widgets\PlatformWidget.cs" />
     <Compile Include="ShellHelper.cs" />
+    <Compile Include="Widgets\GeneralWidget.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.GeneralWidget.cs" />
+    <Compile Include="Widgets\PlatformWidget.cs" />
+    <Compile Include="gtk-gui\PhoneGapProjectAssistant.PlatformWidget.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

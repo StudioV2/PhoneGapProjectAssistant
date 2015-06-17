@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace PhoneGapProjectAssistant
 {
 	[System.ComponentModel.ToolboxItem (true)]
-	public partial class IOSWidget : PlatformWidget
+	public partial class GeneralWidget : PlatformWidget
 	{
-		public IOSWidget ()
+		public GeneralWidget ()
 		{
 			Preferences = new Dictionary<string, string>();
 			PlatformIcons = new Dictionary<string, string>();
@@ -16,16 +16,11 @@ namespace PhoneGapProjectAssistant
 		}
 
 		public override string GetPlatformRealName() {
-			return "iOS";
+			return "General";
 		}
 
 		public override string GetPlatformName() {
-			return "ios";
-		}
-
-		public override string GetPlatformConfigName() {
-			return "ios";
+			return "*";
 		}
 	}
 }
-	

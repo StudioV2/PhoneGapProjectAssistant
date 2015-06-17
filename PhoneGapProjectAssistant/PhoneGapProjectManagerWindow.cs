@@ -9,20 +9,7 @@ namespace PhoneGapProjectAssistant
 	public partial class PhoneGapProjectManagerWindow : Gtk.Window
 	{
 		// Array of platform specific widgets
-		public static PlatformWidget[] platforms = {
-			new IOSWidget (),
-			new AndroidWidget (),
-			new WP8Widget ()
-		};
-
-		public static Dictionary<String, PlatformWidget> platformWidgetsDict;
-
-		static PhoneGapProjectManagerWindow() {
-			platformWidgetsDict = new Dictionary<string, PlatformWidget> ();
-			foreach (var platformWidget in platforms) {
-				platformWidgetsDict.Add (platformWidget.GetPlatformRealName (), platformWidget);
-			}
-		}
+		public Dictionary<String, PlatformWidget> platformWidgetsDict;
 
 		protected PhoneGapProject project;
 		public PhoneGapProject Project {
@@ -45,16 +32,21 @@ namespace PhoneGapProjectAssistant
 
 		public PhoneGapProjectManagerWindow (PhoneGapProject project) : base (Gtk.WindowType.Toplevel)
 		{
+			platformWidgetsDict = new Dictionary<string, PlatformWidget> ();
+			foreach (var platformWidget in project.Platforms) {
+				platformWidgetsDict.Add (platformWidget.GetPlatformRealName (), platformWidget);
+				platformWidget.RebuildContent ();
+			}
+
 			Build ();
 			Project = project;
 			Title = "PhoneGap Project Assistant - " + project.Name;
 			int i = 0;
 			foreach (var platformWidgetKP in platformWidgetsDict) {
-				platformNotebook.AppendPage(platformWidgetKP.Value, new Label(platformWidgetKP.Key));
-				platformCombobox.InsertText (i, platformWidgetKP.Key);
+				platformNotebook.AppendPage (platformWidgetKP.Value, new Label(platformWidgetKP.Key));
+				platformCombobox.InsertText (i, platformWidgetKP.Value.GetPlatformName());
 				i++;
 			}
-			platformCombobox.InsertText (i+1, "*");
 			platformCombobox.Active = 0;
 			platformNotebook.ShowAll ();
 		}
@@ -120,6 +112,7 @@ namespace PhoneGapProjectAssistant
 
 		protected void RebuildPlatformClicked (object sender, EventArgs e)
 		{	
+			
 			UpdateProject ();
 			if (!Directory.Exists (project.Path + "/platforms/" + platformWidgetsDict [platformCombobox.ActiveText].GetPlatformName ())) {
 				ShellHelper.shell ("osascript", "-e 'tell app \"Terminal\" to do script \"" + "cd " + project.Path + "; phonegap platform add android ios; exit; killall Terminal" + "\" activate'");
@@ -133,4 +126,3 @@ namespace PhoneGapProjectAssistant
 		}
 	}
 }
-	

@@ -78,8 +78,6 @@ namespace PhoneGapProjectAssistant
 		
 		private global::Gtk.Notebook platformNotebook;
 		
-		private global::Gtk.Label label5;
-		
 		private global::Gtk.HButtonBox hbuttonbox1;
 		
 		private global::Gtk.Button button619;
@@ -435,22 +433,16 @@ namespace PhoneGapProjectAssistant
 			this.platformNotebook = new global::Gtk.Notebook ();
 			this.platformNotebook.CanFocus = true;
 			this.platformNotebook.Name = "platformNotebook";
-			this.platformNotebook.CurrentPage = 0;
+			this.platformNotebook.CurrentPage = -1;
 			this.platformNotebook.Scrollable = true;
-			// Notebook tab
-			global::Gtk.Label w37 = new global::Gtk.Label ();
-			w37.Visible = true;
-			this.platformNotebook.Add (w37);
-			this.label5 = new global::Gtk.Label ();
-			this.label5.Name = "label5";
-			this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("General");
-			this.platformNotebook.SetTabLabel (w37, this.label5);
-			this.label5.ShowAll ();
+			this.platformNotebook.BorderWidth = ((uint)(3));
 			this.vbox1.Add (this.platformNotebook);
-			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.platformNotebook]));
-			w38.Position = 10;
+			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.platformNotebook]));
+			w37.Position = 10;
+			w37.Padding = ((uint)(2));
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbuttonbox1 = new global::Gtk.HButtonBox ();
+			this.hbuttonbox1.Name = "hbuttonbox1";
 			this.hbuttonbox1.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(1));
 			// Container child hbuttonbox1.Gtk.ButtonBox+ButtonBoxChild
 			this.button619 = new global::Gtk.Button ();
@@ -458,41 +450,41 @@ namespace PhoneGapProjectAssistant
 			this.button619.Name = "button619";
 			this.button619.UseUnderline = true;
 			this.button619.Label = global::Mono.Unix.Catalog.GetString ("Update config");
-			global::Gtk.Image w39 = new global::Gtk.Image ();
-			w39.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-refresh", global::Gtk.IconSize.Menu);
-			this.button619.Image = w39;
+			global::Gtk.Image w38 = new global::Gtk.Image ();
+			w38.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-refresh", global::Gtk.IconSize.Menu);
+			this.button619.Image = w38;
 			this.hbuttonbox1.Add (this.button619);
-			global::Gtk.ButtonBox.ButtonBoxChild w40 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button619]));
-			w40.Expand = false;
-			w40.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w39 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button619]));
+			w39.Expand = false;
+			w39.Fill = false;
 			// Container child hbuttonbox1.Gtk.ButtonBox+ButtonBoxChild
 			this.button163 = new global::Gtk.Button ();
 			this.button163.CanFocus = true;
 			this.button163.Name = "button163";
 			this.button163.UseUnderline = true;
 			this.button163.Label = global::Mono.Unix.Catalog.GetString ("Clean");
-			global::Gtk.Image w41 = new global::Gtk.Image ();
-			w41.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-clear", global::Gtk.IconSize.Menu);
-			this.button163.Image = w41;
+			global::Gtk.Image w40 = new global::Gtk.Image ();
+			w40.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-clear", global::Gtk.IconSize.Menu);
+			this.button163.Image = w40;
 			this.hbuttonbox1.Add (this.button163);
-			global::Gtk.ButtonBox.ButtonBoxChild w42 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button163]));
-			w42.Position = 1;
-			w42.Expand = false;
-			w42.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w41 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button163]));
+			w41.Position = 1;
+			w41.Expand = false;
+			w41.Fill = false;
 			// Container child hbuttonbox1.Gtk.ButtonBox+ButtonBoxChild
 			this.button164 = new global::Gtk.Button ();
 			this.button164.CanFocus = true;
 			this.button164.Name = "button164";
 			this.button164.UseUnderline = true;
 			this.button164.Label = global::Mono.Unix.Catalog.GetString ("Build");
-			global::Gtk.Image w43 = new global::Gtk.Image ();
-			w43.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-execute", global::Gtk.IconSize.Menu);
-			this.button164.Image = w43;
+			global::Gtk.Image w42 = new global::Gtk.Image ();
+			w42.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-execute", global::Gtk.IconSize.Menu);
+			this.button164.Image = w42;
 			this.hbuttonbox1.Add (this.button164);
-			global::Gtk.ButtonBox.ButtonBoxChild w44 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button164]));
-			w44.Position = 2;
-			w44.Expand = false;
-			w44.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w43 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button164]));
+			w43.Position = 2;
+			w43.Expand = false;
+			w43.Fill = false;
 			// Container child hbuttonbox1.Gtk.ButtonBox+ButtonBoxChild
 			this.button165 = new global::Gtk.Button ();
 			this.button165.CanFocus = true;
@@ -500,29 +492,29 @@ namespace PhoneGapProjectAssistant
 			this.button165.UseUnderline = true;
 			this.button165.Label = global::Mono.Unix.Catalog.GetString ("Emulate");
 			this.hbuttonbox1.Add (this.button165);
-			global::Gtk.ButtonBox.ButtonBoxChild w45 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button165]));
-			w45.Position = 3;
-			w45.Expand = false;
-			w45.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w44 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button165]));
+			w44.Position = 3;
+			w44.Expand = false;
+			w44.Fill = false;
 			// Container child hbuttonbox1.Gtk.ButtonBox+ButtonBoxChild
 			this.button166 = new global::Gtk.Button ();
 			this.button166.CanFocus = true;
 			this.button166.Name = "button166";
 			this.button166.UseUnderline = true;
 			this.button166.Label = global::Mono.Unix.Catalog.GetString ("Run");
-			global::Gtk.Image w46 = new global::Gtk.Image ();
-			w46.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-media-play", global::Gtk.IconSize.Menu);
-			this.button166.Image = w46;
+			global::Gtk.Image w45 = new global::Gtk.Image ();
+			w45.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-media-play", global::Gtk.IconSize.Menu);
+			this.button166.Image = w45;
 			this.hbuttonbox1.Add (this.button166);
-			global::Gtk.ButtonBox.ButtonBoxChild w47 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button166]));
-			w47.Position = 4;
+			global::Gtk.ButtonBox.ButtonBoxChild w46 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox1 [this.button166]));
+			w46.Position = 4;
+			w46.Expand = false;
+			w46.Fill = false;
+			this.vbox1.Add (this.hbuttonbox1);
+			global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbuttonbox1]));
+			w47.Position = 11;
 			w47.Expand = false;
 			w47.Fill = false;
-			this.vbox1.Add (this.hbuttonbox1);
-			global::Gtk.Box.BoxChild w48 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbuttonbox1]));
-			w48.Position = 11;
-			w48.Expand = false;
-			w48.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.hbuttonbox2 = new global::Gtk.HButtonBox ();
 			this.hbuttonbox2.Name = "hbuttonbox2";
@@ -533,27 +525,27 @@ namespace PhoneGapProjectAssistant
 			this.button158.Name = "button158";
 			this.button158.UseUnderline = true;
 			this.button158.Label = global::Mono.Unix.Catalog.GetString ("Close");
-			global::Gtk.Image w49 = new global::Gtk.Image ();
-			w49.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-close", global::Gtk.IconSize.Menu);
-			this.button158.Image = w49;
+			global::Gtk.Image w48 = new global::Gtk.Image ();
+			w48.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-close", global::Gtk.IconSize.Menu);
+			this.button158.Image = w48;
 			this.hbuttonbox2.Add (this.button158);
-			global::Gtk.ButtonBox.ButtonBoxChild w50 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button158]));
-			w50.Expand = false;
-			w50.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w49 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button158]));
+			w49.Expand = false;
+			w49.Fill = false;
 			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
 			this.button159 = new global::Gtk.Button ();
 			this.button159.CanFocus = true;
 			this.button159.Name = "button159";
 			this.button159.UseUnderline = true;
 			this.button159.Label = global::Mono.Unix.Catalog.GetString ("Reveal in Finder");
-			global::Gtk.Image w51 = new global::Gtk.Image ();
-			w51.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-directory", global::Gtk.IconSize.Menu);
-			this.button159.Image = w51;
+			global::Gtk.Image w50 = new global::Gtk.Image ();
+			w50.Pixbuf = global::Stetic.IconLoader.LoadIcon (this, "gtk-directory", global::Gtk.IconSize.Menu);
+			this.button159.Image = w50;
 			this.hbuttonbox2.Add (this.button159);
-			global::Gtk.ButtonBox.ButtonBoxChild w52 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button159]));
-			w52.Position = 1;
-			w52.Expand = false;
-			w52.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w51 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button159]));
+			w51.Position = 1;
+			w51.Expand = false;
+			w51.Fill = false;
 			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
 			this.button125 = new global::Gtk.Button ();
 			this.button125.CanFocus = true;
@@ -561,10 +553,10 @@ namespace PhoneGapProjectAssistant
 			this.button125.UseUnderline = true;
 			this.button125.Label = global::Mono.Unix.Catalog.GetString ("Open Xcode");
 			this.hbuttonbox2.Add (this.button125);
-			global::Gtk.ButtonBox.ButtonBoxChild w53 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button125]));
-			w53.Position = 2;
-			w53.Expand = false;
-			w53.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w52 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button125]));
+			w52.Position = 2;
+			w52.Expand = false;
+			w52.Fill = false;
 			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
 			this.button160 = new global::Gtk.Button ();
 			this.button160.CanFocus = true;
@@ -572,10 +564,10 @@ namespace PhoneGapProjectAssistant
 			this.button160.UseUnderline = true;
 			this.button160.Label = global::Mono.Unix.Catalog.GetString ("Manage plugins");
 			this.hbuttonbox2.Add (this.button160);
-			global::Gtk.ButtonBox.ButtonBoxChild w54 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button160]));
-			w54.Position = 3;
-			w54.Expand = false;
-			w54.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w53 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button160]));
+			w53.Position = 3;
+			w53.Expand = false;
+			w53.Fill = false;
 			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
 			this.button161 = new global::Gtk.Button ();
 			this.button161.CanFocus = true;
@@ -583,10 +575,10 @@ namespace PhoneGapProjectAssistant
 			this.button161.UseUnderline = true;
 			this.button161.Label = global::Mono.Unix.Catalog.GetString ("Splash and icons");
 			this.hbuttonbox2.Add (this.button161);
-			global::Gtk.ButtonBox.ButtonBoxChild w55 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button161]));
-			w55.Position = 4;
-			w55.Expand = false;
-			w55.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w54 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button161]));
+			w54.Position = 4;
+			w54.Expand = false;
+			w54.Fill = false;
 			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
 			this.button162 = new global::Gtk.Button ();
 			this.button162.CanFocus = true;
@@ -594,21 +586,21 @@ namespace PhoneGapProjectAssistant
 			this.button162.UseUnderline = true;
 			this.button162.Label = global::Mono.Unix.Catalog.GetString ("Edit config.xml");
 			this.hbuttonbox2.Add (this.button162);
-			global::Gtk.ButtonBox.ButtonBoxChild w56 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button162]));
-			w56.Position = 5;
+			global::Gtk.ButtonBox.ButtonBoxChild w55 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2 [this.button162]));
+			w55.Position = 5;
+			w55.Expand = false;
+			w55.Fill = false;
+			this.vbox1.Add (this.hbuttonbox2);
+			global::Gtk.Box.BoxChild w56 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbuttonbox2]));
+			w56.Position = 12;
 			w56.Expand = false;
 			w56.Fill = false;
-			this.vbox1.Add (this.hbuttonbox2);
-			global::Gtk.Box.BoxChild w57 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbuttonbox2]));
-			w57.Position = 12;
-			w57.Expand = false;
-			w57.Fill = false;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
 			this.DefaultWidth = 830;
-			this.DefaultHeight = 769;
+			this.DefaultHeight = 664;
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 			this.button157.Clicked += new global::System.EventHandler (this.RebuildPlatformClicked);

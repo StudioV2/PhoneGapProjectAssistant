@@ -6,12 +6,12 @@ namespace PhoneGapProjectAssistant
 	[System.ComponentModel.ToolboxItem (true)]
 	public partial class WP8Widget : PlatformWidget
 	{
-		Dictionary<String, String> Preferences = new Dictionary<string, string>();
-		Dictionary<String, String> PlatformIcons = new Dictionary<string, string>();
-		Dictionary<String, String> PlatformSplashs = new Dictionary<string, string>();
-
 		public WP8Widget ()
 		{
+			Preferences = new Dictionary<string, string>();
+			PlatformIcons = new Dictionary<string, string>();
+			PlatformSplashs = new Dictionary<string, string>();
+
 			this.Build ();
 		}
 
@@ -20,19 +20,11 @@ namespace PhoneGapProjectAssistant
 		}
 
 		public override string GetPlatformName() {
-			return "WP8";
+			return "wp8";
 		}
 
-		public override Dictionary<String, String> GetPreferences() {
-			return Preferences;
-		}
-
-		public override Dictionary<String, String> GetPlatformIcons() {
-			return PlatformIcons;
-		}
-
-		public override Dictionary<String, String> GetPlatformSplashs() {
-			return PlatformSplashs;
+		public override string GetPlatformConfigName() {
+			return "winphone";
 		}
 	}
 }

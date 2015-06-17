@@ -1,10 +1,24 @@
-﻿using System;
+﻿using Gtk;
+using System;
 using System.Collections.Generic;
 
 namespace PhoneGapProjectAssistant
 {
-	public abstract class PlatformWidget : Gtk.Bin
+	[System.ComponentModel.ToolboxItem (true)]
+	public abstract partial class PlatformWidget : Gtk.Bin
 	{
+		public Dictionary<String, String> Preferences;
+		public Dictionary<String, String> PlatformIcons;
+		public Dictionary<String, String> PlatformSplashs;
+
+		public PlatformWidget() {
+			Preferences = new Dictionary<string, string>();
+			PlatformIcons = new Dictionary<string, string>();
+			PlatformSplashs = new Dictionary<string, string>();
+			 
+			this.Build ();
+		}
+
 		public virtual string GetPlatformRealName() {
 			return "";
 		}
@@ -13,14 +27,24 @@ namespace PhoneGapProjectAssistant
 			return "";
 		}
 
-		// preference name="String" value="String"
-		public abstract Dictionary<String, String> GetPreferences();
+		public virtual string GetPlatformConfigName() {
+			return "";
+		}
 
-		// icon density="String" src="String"
-		public abstract Dictionary<String, String> GetPlatformIcons();
+		public virtual void RebuildContent() {
+			foreach (var kvp in Preferences) {
+				var label = new Label ();
+				label.Text = kvp.Key;
+				var entry = new Entry ();
+				entry.Text = kvp.Value;
 
-		// splash density="String" src="String"
-		public abstract Dictionary<String, String> GetPlatformSplashs();
+				var hbox = new HBox ();
+				hbox.Add (label);
+				hbox.Add (entry);
 
+				hbox.Homogeneous = true;
+				preferenceContentVbox.Add (hbox);
+			}
+		}
 	}
 }

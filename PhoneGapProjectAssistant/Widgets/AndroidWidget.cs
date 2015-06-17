@@ -6,12 +6,12 @@ namespace PhoneGapProjectAssistant
 	[System.ComponentModel.ToolboxItem (true)]
 	public partial class AndroidWidget : PlatformWidget
 	{
-		Dictionary<String, String> Preferences = new Dictionary<string, string>();
-		Dictionary<String, String> PlatformIcons = new Dictionary<string, string>();
-		Dictionary<String, String> PlatformSplashs = new Dictionary<string, string>();
-
 		public AndroidWidget ()
 		{
+			Preferences = new Dictionary<string, string>();
+			PlatformIcons = new Dictionary<string, string>();
+			PlatformSplashs = new Dictionary<string, string>();
+
 			this.Build ();
 		}
 
@@ -23,16 +23,8 @@ namespace PhoneGapProjectAssistant
 			return "android";
 		}
 
-		public override Dictionary<String, String> GetPreferences() {
-			return Preferences;
-		}
-
-		public override Dictionary<String, String> GetPlatformIcons() {
-			return PlatformIcons;
-		}
-
-		public override Dictionary<String, String> GetPlatformSplashs() {
-			return PlatformSplashs;
+		public override string GetPlatformConfigName() {
+			return "android";
 		}
 	}
 }
