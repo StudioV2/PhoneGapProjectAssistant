@@ -73,11 +73,11 @@ namespace PhoneGapProjectAssistant
 									switch (resnode.Name) {
 									case "icon":
 										Console.WriteLine("  Found icon definition");
-										p.PlatformIcons.Add(i.ToString(), resnode.Attributes["src"].Value);
+										p.PlatformIcons.Add(i.ToString(), Path + "/" + resnode.Attributes["src"].Value);
 										break;
 									case "splash":
 										Console.WriteLine("  Found splash definition");
-										p.PlatformSplashs.Add(i.ToString(),resnode.Attributes["src"].Value);
+										p.PlatformSplashs.Add(i.ToString(), Path + "/" + resnode.Attributes["src"].Value);
 										break;
 									}
 									i++;

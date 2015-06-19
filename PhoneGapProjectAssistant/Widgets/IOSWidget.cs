@@ -26,6 +26,12 @@ namespace PhoneGapProjectAssistant
 		public override string GetPlatformConfigName() {
 			return "ios";
 		}
+
+		public override void RebuildContent() {
+			base.RebuildContent ();
+
+			DestroyGeneralSection ();
+		}
 	}
 }
 	

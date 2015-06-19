@@ -25,6 +25,9 @@ namespace PhoneGapProjectAssistant
 
 		public override void RebuildContent() {
 			base.RebuildContent ();
+
+			DestroyIconsSection ();
+			DestroySplashSection ();
 		}
 	}
 }

@@ -26,6 +26,12 @@ namespace PhoneGapProjectAssistant
 		public override string GetPlatformConfigName() {
 			return "winphone";
 		}
+
+		public override void RebuildContent() {
+			base.RebuildContent ();
+
+			DestroyGeneralSection ();
+		}
 	}
 }
 

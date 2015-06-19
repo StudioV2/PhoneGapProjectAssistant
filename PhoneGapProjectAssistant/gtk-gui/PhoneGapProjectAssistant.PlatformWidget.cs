@@ -6,31 +6,31 @@ namespace PhoneGapProjectAssistant
 	{
 		private global::Gtk.VBox vbox1;
 		
-		private global::Gtk.HBox hbox3;
+		private global::Gtk.HBox PreferencesTitleBox;
 		
 		private global::Gtk.Label label2;
 		
-		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		private global::Gtk.ScrolledWindow PreferencesScrolledBox;
 		
 		private global::Gtk.VBox preferenceContentVbox;
 		
 		private global::Gtk.Button addPreferenceButton;
 		
-		private global::Gtk.HBox hbox2;
+		private global::Gtk.HBox IconsTitleBox;
 		
 		private global::Gtk.Label label3;
 		
-		private global::Gtk.ScrolledWindow scrolledwindow1;
+		private global::Gtk.ScrolledWindow IconsScrolledBox;
 		
 		private global::Gtk.VBox iconsVbox;
 		
 		private global::Gtk.Button addIconButton;
 		
-		private global::Gtk.HBox hbox1;
+		private global::Gtk.HBox SplashTitleBox;
 		
 		private global::Gtk.Label label4;
 		
-		private global::Gtk.ScrolledWindow scrolledwindow2;
+		private global::Gtk.ScrolledWindow SplashScrolledBox;
 		
 		private global::Gtk.VBox splashesVbox;
 		
@@ -47,31 +47,31 @@ namespace PhoneGapProjectAssistant
 			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox3 = new global::Gtk.HBox ();
-			this.hbox3.Name = "hbox3";
-			this.hbox3.Spacing = 6;
-			// Container child hbox3.Gtk.Box+BoxChild
+			this.PreferencesTitleBox = new global::Gtk.HBox ();
+			this.PreferencesTitleBox.Name = "PreferencesTitleBox";
+			this.PreferencesTitleBox.Spacing = 6;
+			// Container child PreferencesTitleBox.Gtk.Box+BoxChild
 			this.label2 = new global::Gtk.Label ();
 			this.label2.Name = "label2";
 			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("<span font_weight=\"bold\">Global Prefrences :</span>");
 			this.label2.UseMarkup = true;
 			this.label2.UseUnderline = true;
-			this.hbox3.Add (this.label2);
-			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.label2]));
+			this.PreferencesTitleBox.Add (this.label2);
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.PreferencesTitleBox [this.label2]));
 			w1.Position = 0;
 			w1.Expand = false;
 			w1.Fill = false;
-			this.vbox1.Add (this.hbox3);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox3]));
+			this.vbox1.Add (this.PreferencesTitleBox);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.PreferencesTitleBox]));
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
-			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
-			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
-			this.GtkScrolledWindow.BorderWidth = ((uint)(3));
-			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+			this.PreferencesScrolledBox = new global::Gtk.ScrolledWindow ();
+			this.PreferencesScrolledBox.Name = "PreferencesScrolledBox";
+			this.PreferencesScrolledBox.ShadowType = ((global::Gtk.ShadowType)(1));
+			this.PreferencesScrolledBox.BorderWidth = ((uint)(3));
+			// Container child PreferencesScrolledBox.Gtk.Container+ContainerChild
 			global::Gtk.Viewport w3 = new global::Gtk.Viewport ();
 			w3.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child GtkViewport.Gtk.Container+ContainerChild
@@ -90,38 +90,37 @@ namespace PhoneGapProjectAssistant
 			w4.PackType = ((global::Gtk.PackType)(1));
 			w4.Position = 1;
 			w4.Expand = false;
-			w4.Fill = false;
 			w3.Add (this.preferenceContentVbox);
-			this.GtkScrolledWindow.Add (w3);
-			this.vbox1.Add (this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.GtkScrolledWindow]));
+			this.PreferencesScrolledBox.Add (w3);
+			this.vbox1.Add (this.PreferencesScrolledBox);
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.PreferencesScrolledBox]));
 			w7.Position = 1;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox2 = new global::Gtk.HBox ();
-			this.hbox2.Name = "hbox2";
-			this.hbox2.Spacing = 6;
-			// Container child hbox2.Gtk.Box+BoxChild
+			this.IconsTitleBox = new global::Gtk.HBox ();
+			this.IconsTitleBox.Name = "IconsTitleBox";
+			this.IconsTitleBox.Spacing = 6;
+			// Container child IconsTitleBox.Gtk.Box+BoxChild
 			this.label3 = new global::Gtk.Label ();
 			this.label3.Name = "label3";
 			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("<span font_weight=\"bold\">Icons :</span>");
 			this.label3.UseMarkup = true;
-			this.hbox2.Add (this.label3);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.label3]));
+			this.IconsTitleBox.Add (this.label3);
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.IconsTitleBox [this.label3]));
 			w8.Position = 0;
 			w8.Expand = false;
 			w8.Fill = false;
-			this.vbox1.Add (this.hbox2);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox2]));
+			this.vbox1.Add (this.IconsTitleBox);
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.IconsTitleBox]));
 			w9.Position = 2;
 			w9.Expand = false;
 			w9.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.scrolledwindow1 = new global::Gtk.ScrolledWindow ();
-			this.scrolledwindow1.CanFocus = true;
-			this.scrolledwindow1.Name = "scrolledwindow1";
-			this.scrolledwindow1.ShadowType = ((global::Gtk.ShadowType)(1));
-			this.scrolledwindow1.BorderWidth = ((uint)(3));
-			// Container child scrolledwindow1.Gtk.Container+ContainerChild
+			this.IconsScrolledBox = new global::Gtk.ScrolledWindow ();
+			this.IconsScrolledBox.CanFocus = true;
+			this.IconsScrolledBox.Name = "IconsScrolledBox";
+			this.IconsScrolledBox.ShadowType = ((global::Gtk.ShadowType)(1));
+			this.IconsScrolledBox.BorderWidth = ((uint)(3));
+			// Container child IconsScrolledBox.Gtk.Container+ContainerChild
 			global::Gtk.Viewport w10 = new global::Gtk.Viewport ();
 			w10.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child GtkViewport1.Gtk.Container+ContainerChild
@@ -142,36 +141,36 @@ namespace PhoneGapProjectAssistant
 			w11.Expand = false;
 			w11.Fill = false;
 			w10.Add (this.iconsVbox);
-			this.scrolledwindow1.Add (w10);
-			this.vbox1.Add (this.scrolledwindow1);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.scrolledwindow1]));
+			this.IconsScrolledBox.Add (w10);
+			this.vbox1.Add (this.IconsScrolledBox);
+			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.IconsScrolledBox]));
 			w14.Position = 3;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.hbox1 = new global::Gtk.HBox ();
-			this.hbox1.Name = "hbox1";
-			this.hbox1.Spacing = 6;
-			// Container child hbox1.Gtk.Box+BoxChild
+			this.SplashTitleBox = new global::Gtk.HBox ();
+			this.SplashTitleBox.Name = "SplashTitleBox";
+			this.SplashTitleBox.Spacing = 6;
+			// Container child SplashTitleBox.Gtk.Box+BoxChild
 			this.label4 = new global::Gtk.Label ();
 			this.label4.Name = "label4";
 			this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("<span font_weight=\"bold\">Splash Screens :</span>");
 			this.label4.UseMarkup = true;
-			this.hbox1.Add (this.label4);
-			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label4]));
+			this.SplashTitleBox.Add (this.label4);
+			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.SplashTitleBox [this.label4]));
 			w15.Position = 0;
 			w15.Expand = false;
 			w15.Fill = false;
-			this.vbox1.Add (this.hbox1);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+			this.vbox1.Add (this.SplashTitleBox);
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.SplashTitleBox]));
 			w16.Position = 4;
 			w16.Expand = false;
 			w16.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.scrolledwindow2 = new global::Gtk.ScrolledWindow ();
-			this.scrolledwindow2.CanFocus = true;
-			this.scrolledwindow2.Name = "scrolledwindow2";
-			this.scrolledwindow2.ShadowType = ((global::Gtk.ShadowType)(1));
-			this.scrolledwindow2.BorderWidth = ((uint)(3));
-			// Container child scrolledwindow2.Gtk.Container+ContainerChild
+			this.SplashScrolledBox = new global::Gtk.ScrolledWindow ();
+			this.SplashScrolledBox.CanFocus = true;
+			this.SplashScrolledBox.Name = "SplashScrolledBox";
+			this.SplashScrolledBox.ShadowType = ((global::Gtk.ShadowType)(1));
+			this.SplashScrolledBox.BorderWidth = ((uint)(3));
+			// Container child SplashScrolledBox.Gtk.Container+ContainerChild
 			global::Gtk.Viewport w17 = new global::Gtk.Viewport ();
 			w17.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child GtkViewport2.Gtk.Container+ContainerChild
@@ -193,9 +192,9 @@ namespace PhoneGapProjectAssistant
 			w18.Expand = false;
 			w18.Fill = false;
 			w17.Add (this.splashesVbox);
-			this.scrolledwindow2.Add (w17);
-			this.vbox1.Add (this.scrolledwindow2);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.scrolledwindow2]));
+			this.SplashScrolledBox.Add (w17);
+			this.vbox1.Add (this.SplashScrolledBox);
+			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.SplashScrolledBox]));
 			w21.Position = 5;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
