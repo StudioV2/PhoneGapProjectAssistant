@@ -92,16 +92,6 @@ namespace PhoneGapProjectAssistant
 			}
 		}
 
-		protected void AddIconClicked (object sender, EventArgs e)
-		{
-			
-		}
-
-		protected void AddSplashClicked (object sender, EventArgs e)
-		{
-			
-		}
-
 		public void DestroyGeneralSection() {
 			PreferencesTitleBox.Destroy ();
 			PreferencesScrolledBox.Destroy ();

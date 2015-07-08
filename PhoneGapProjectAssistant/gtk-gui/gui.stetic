@@ -937,7 +937,7 @@
       <placeholder />
     </child>
   </widget>
-  <widget class="Gtk.Bin" id="PhoneGapProjectAssistant.PlatformWidget" design-size="221 291">
+  <widget class="Gtk.Bin" id="PhoneGapProjectAssistant.PlatformWidget" design-size="402 309">
     <property name="MemberName" />
     <property name="Visible">False</property>
     <child>
@@ -948,6 +948,7 @@
           <widget class="Gtk.HBox" id="PreferencesTitleBox">
             <property name="MemberName">PreferencesTitleBox</property>
             <property name="Spacing">6</property>
+            <property name="BorderWidth">3</property>
             <child>
               <widget class="Gtk.Label" id="label2">
                 <property name="MemberName" />
@@ -983,12 +984,22 @@
                 <property name="MemberName" />
                 <property name="ShadowType">None</property>
                 <child>
-                  <widget class="Gtk.VBox" id="preferenceContentVbox">
-                    <property name="MemberName">preferenceContentVbox</property>
+                  <widget class="Gtk.VBox" id="preferenceContentVboxTop">
+                    <property name="MemberName">preferenceContentVboxTop</property>
                     <property name="ShowScrollbars">True</property>
                     <property name="Spacing">6</property>
                     <child>
-                      <placeholder />
+                      <widget class="Gtk.VBox" id="preferenceContentVbox">
+                        <property name="MemberName">preferenceContentVbox</property>
+                        <property name="Spacing">6</property>
+                        <child>
+                          <placeholder />
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
                     </child>
                     <child>
                       <widget class="Gtk.Button" id="addPreferenceButton">
@@ -1020,6 +1031,7 @@
           <widget class="Gtk.HBox" id="IconsTitleBox">
             <property name="MemberName">IconsTitleBox</property>
             <property name="Spacing">6</property>
+            <property name="BorderWidth">3</property>
             <child>
               <widget class="Gtk.Label" id="label3">
                 <property name="MemberName" />
@@ -1061,23 +1073,6 @@
                     <child>
                       <placeholder />
                     </child>
-                    <child>
-                      <widget class="Gtk.Button" id="addIconButton">
-                        <property name="MemberName">addIconButton</property>
-                        <property name="CanFocus">True</property>
-                        <property name="Type">TextOnly</property>
-                        <property name="Label" translatable="yes">Add Icon</property>
-                        <property name="UseUnderline">True</property>
-                        <property name="BorderWidth">3</property>
-                      </widget>
-                      <packing>
-                        <property name="PackType">End</property>
-                        <property name="Position">1</property>
-                        <property name="AutoSize">True</property>
-                        <property name="Expand">False</property>
-                        <property name="Fill">False</property>
-                      </packing>
-                    </child>
                   </widget>
                 </child>
               </widget>
@@ -1092,6 +1087,7 @@
           <widget class="Gtk.HBox" id="SplashTitleBox">
             <property name="MemberName">SplashTitleBox</property>
             <property name="Spacing">6</property>
+            <property name="BorderWidth">3</property>
             <child>
               <widget class="Gtk.Label" id="label4">
                 <property name="MemberName" />
@@ -1133,23 +1129,6 @@
                     <property name="Spacing">6</property>
                     <child>
                       <placeholder />
-                    </child>
-                    <child>
-                      <widget class="Gtk.Button" id="addSplashButton">
-                        <property name="MemberName">addSplashButton</property>
-                        <property name="CanFocus">True</property>
-                        <property name="Type">TextOnly</property>
-                        <property name="Label" translatable="yes">Add Splash Screen</property>
-                        <property name="UseUnderline">True</property>
-                        <property name="BorderWidth">3</property>
-                      </widget>
-                      <packing>
-                        <property name="PackType">End</property>
-                        <property name="Position">1</property>
-                        <property name="AutoSize">True</property>
-                        <property name="Expand">False</property>
-                        <property name="Fill">False</property>
-                      </packing>
                     </child>
                   </widget>
                 </child>

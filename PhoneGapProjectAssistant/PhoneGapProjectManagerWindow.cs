@@ -114,15 +114,17 @@ namespace PhoneGapProjectAssistant
 		{	
 			
 			UpdateProject ();
+			/*
 			if (!Directory.Exists (project.Path + "/platforms/" + platformWidgetsDict [platformCombobox.ActiveText].GetPlatformName ())) {
 				ShellHelper.shell ("osascript", "-e 'tell app \"Terminal\" to do script \"" + "cd " + project.Path + "; phonegap platform add android ios; exit; killall Terminal" + "\" activate'");
 			}
 			ShellHelper.shell ("osascript", "-e 'tell app \"Terminal\" to do script \"" + "cd " + project.Path + "; phonegap build; exit; killall Terminal" + "\" activate'");
+			*/
 		}
 
 		protected void OpenXCodeClicked (object sender, EventArgs e)
 		{
-			ShellHelper.shell ("osascript", "-e 'tell app \"Terminal\" to do script \"" + "open \"" + project.Path + "/platforms/ios/" + project.Name + ".xcodeproj\"; exit; killall Terminal" + "\" activate'");
+			//ShellHelper.shell ("osascript", "-e 'tell app \"Terminal\" to do script \"" + "open \"" + project.Path + "/platforms/ios/" + project.Name + ".xcodeproj\"; exit; killall Terminal" + "\" activate'");
 		}
 	}
 }
